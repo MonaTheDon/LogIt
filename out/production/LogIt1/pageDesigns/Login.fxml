@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerClasses.LoginControl">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane layoutX="302.0" prefHeight="600.0" prefWidth="306.0" styleClass="back" stylesheets="@../css/app.css">
+               <children>
+                  <TextField fx:id="UserTF" layoutX="127.0" layoutY="157.0" promptText="Enter your username" />
+                  <Text layoutX="25.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="72.1461181640625">
+                     <font>
+                        <Font name="Georgia" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="25.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                     <font>
+                        <Font name="Georgia" size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="LoginBTN" layoutX="152.0" layoutY="236.0" onAction="#LoginAction" prefHeight="25.0" prefWidth="72.0" styleClass="btn" stylesheets="@../css/app.css" text="Log me in" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="Stat" layoutX="61.0" layoutY="309.0" prefHeight="17.0" prefWidth="105.0" />
+                  <PasswordField fx:id="PassTF" layoutX="127.0" layoutY="199.0" promptText="Enter your password" />
+                  <Text layoutX="25.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User?">
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="RegBTN" layoutX="101.0" layoutY="321.0" onAction="#RegisterAction" prefHeight="25.0" prefWidth="91.0" styleClass="btn" stylesheets="@../css/app.css" text="Register Here" textFill="WHITE" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="150.0" fitWidth="222.0" layoutX="45.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
