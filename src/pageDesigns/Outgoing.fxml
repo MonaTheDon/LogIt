@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerClasses.OutgoingControl">
+    <children>
+        <Pane layoutX="10.0" layoutY="3.0" prefHeight="586.0" prefWidth="194.0" styleClass="menu-bar" stylesheets="@../css/app.css">
+            <children>
+                <ImageView fitHeight="141.0" fitWidth="182.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/LogItLogoBg.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="viewports" buttonType="RAISED" layoutY="191.0" onAction="#ViewStockOpenAction" prefHeight="60.0" prefWidth="176.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="VIEW YOUR STOCKS" textFill="#fcf7f7" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="incstocksbtn" buttonType="RAISED" layoutY="293.0" onAction="#IncomingOpen" prefHeight="60.0" prefWidth="176.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="INCOMING STOCKS" textFill="#faf8f8">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="outgostocksbtn" buttonType="RAISED" layoutY="399.0" prefHeight="70.0" prefWidth="194.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="OUTGOING STOCKS" textFill="#faf6f6">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </Pane>
+        <Label contentDisplay="CENTER" layoutX="278.0" layoutY="27.0" prefHeight="70.0" prefWidth="344.0" text="OUTGOING STOCKS" textAlignment="CENTER">
+            <font>
+                <Font name="Lato-Light" size="36.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="logoutbtn" buttonType="RAISED" layoutX="786.0" layoutY="24.0" onAction="#LogOut" prefHeight="38.0" prefWidth="98.0" styleClass="btn-log" stylesheets="@../css/app.css" text="LOG OUT">
+            <font>
+                <Font name="Lucida Console" size="14.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="102.0" fitWidth="142.0" layoutX="637.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/profilepic1.png" />
+            </image>
+        </ImageView>
+        <JFXButton fx:id="swuserbtn" buttonType="RAISED" layoutX="787.0" layoutY="79.0" prefHeight="38.0" prefWidth="97.0" styleClass="btn-switch" stylesheets="@../css/app.css" text="SWITCH USER">
+            <font>
+                <Font name="Lucida Console" size="12.0" />
+            </font>
+        </JFXButton>
+        <Pane layoutX="268.0" layoutY="117.0" prefHeight="451.0" prefWidth="531.0" styleClass="border" stylesheets="@../css/app.css">
+            <children>
+                <Label layoutX="30.0" layoutY="364.0" prefHeight="29.0" prefWidth="176.0" text="REMOVE QUANTITY:">
+                    <font>
+                        <Font name="Lato-Light" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="qttf" layoutX="213.0" layoutY="364.0" prefHeight="29.0" prefWidth="202.0">
+                    <font>
+                        <Font name="Lato-Light" size="14.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="30.0" layoutY="108.0" text="PRODUCT CODE:">
+                    <font>
+                        <Font name="Lato-Light" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="pctf" layoutX="213.0" layoutY="105.0" prefHeight="29.0" prefWidth="194.0">
+                    <font>
+                        <Font name="Lato-Light" size="14.0" />
+                    </font>
+                </TextField>
+                <JFXButton fx:id="rem2" buttonType="RAISED" layoutX="431.0" layoutY="385.0" onAction="#RemoveUnit" prefHeight="38.0" prefWidth="86.0" styleClass="btn-log" stylesheets="@../css/app.css" text="REMOVE" textFill="#f2ebeb">
+                    <font>
+                        <Font name="Javanese Text" size="14.0" />
+                    </font>
+                </JFXButton>
+            <Label layoutX="22.0" layoutY="26.0" text="Remove a Product from Inventory">
+               <font>
+                  <Font name="Lato-Light" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="210.0" text="Remove a Unit">
+               <font>
+                  <Font name="Lato-Light" size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutX="22.0" layoutY="66.0" prefHeight="7.0" prefWidth="335.0" />
+            <Separator layoutX="25.0" layoutY="249.0" prefHeight="7.0" prefWidth="329.0" />
+            <Label layoutX="30.0" layoutY="302.0" text="PRODUCT CODE:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pctf2" layoutX="213.0" layoutY="300.0" prefHeight="28.0" prefWidth="202.0">
+               <font>
+                  <Font name="Lato-Light" size="14.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="rem1" layoutX="434.0" layoutY="160.0" onAction="#RemoveProd" styleClass="btn-log" stylesheets="@../css/app.css" text="REMOVE" textFill="#faf8f8">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="greenlbl" layoutX="209.0" layoutY="165.0" prefHeight="40.0" prefWidth="202.0" textFill="#68e749" wrapText="true">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="redlbl" layoutX="214.0" layoutY="410.0" prefHeight="40.0" prefWidth="186.0" textFill="#ef0606" wrapText="true">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="greenlbl2" layoutX="240.0" layoutY="397.0" prefHeight="40.0" prefWidth="167.0" textFill="#1ee70c">
+               <font>
+                  <Font name="Javanese Text" size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

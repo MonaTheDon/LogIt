@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerClasses.ViewStockControl">
+    <children>
+        <Pane layoutX="10.0" layoutY="3.0" prefHeight="586.0" prefWidth="194.0" styleClass="menu-bar" stylesheets="@../css/app.css">
+            <children>
+                <ImageView fitHeight="141.0" fitWidth="182.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Images/LogItLogoBg.png" />
+                    </image>
+                </ImageView>
+                <JFXButton fx:id="viewstocksbtn" buttonType="RAISED" layoutY="191.0" prefHeight="60.0" prefWidth="194.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="VIEW YOUR STOCKS" textFill="#fcf7f7" wrapText="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="incstocksbtn" buttonType="RAISED" layoutY="293.0" onAction="#IncomingOpen" prefHeight="60.0" prefWidth="176.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="INCOMING STOCKS" textFill="#faf8f8">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="outgostocksbtn" buttonType="RAISED" layoutY="399.0" onAction="#OutgoingOpen" prefHeight="60.0" prefWidth="176.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="OUTGOING STOCKS" textFill="#faf6f6">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </JFXButton>
+            </children>
+        </Pane>
+        <Label contentDisplay="CENTER" layoutX="336.0" layoutY="22.0" prefHeight="70.0" prefWidth="254.0" text="YOUR STOCKS" textAlignment="CENTER">
+            <font>
+                <Font name="Lato-Light" size="36.0" />
+            </font>
+        </Label>
+        <JFXButton fx:id="logoutbtn" buttonType="RAISED" layoutX="786.0" layoutY="24.0" prefHeight="38.0" prefWidth="98.0" styleClass="btn-log" stylesheets="@../css/app.css" text="LOG OUT">
+            <font>
+                <Font name="Lucida Console" size="14.0" />
+            </font>
+        </JFXButton>
+        <ImageView fitHeight="102.0" fitWidth="142.0" layoutX="637.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Images/profilepic1.png" />
+            </image>
+        </ImageView>
+        <JFXButton fx:id="swuserbtn" buttonType="RAISED" layoutX="787.0" layoutY="79.0" prefHeight="38.0" prefWidth="97.0" styleClass="btn-switch" stylesheets="@../css/app.css" text="SWITCH USER">
+            <font>
+                <Font name="Lucida Console" size="12.0" />
+            </font>
+        </JFXButton>
+      <Pane layoutX="285.0" layoutY="129.0" prefHeight="438.0" prefWidth="529.0" styleClass="border" stylesheets="@../css/app.css">
+         <children>
+            <Label layoutX="22.0" layoutY="116.0" prefHeight="47.0" prefWidth="152.0" text="PRODUCT NAME:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="198.0" prefHeight="29.0" prefWidth="98.0" text="QUANTITY:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="275.0" text="PRICE:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="22.0" layoutY="357.0" text="RECIEVED DATE:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pntf" editable="false" layoutX="207.0" layoutY="127.0" prefHeight="29.0" prefWidth="194.0">
+               <font>
+                  <Font name="Lato-Light" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="qttf" editable="false" layoutX="207.0" layoutY="200.0" prefHeight="29.0" prefWidth="194.0">
+               <font>
+                  <Font name="Lato-Light" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="ptf" editable="false" layoutX="207.0" layoutY="274.0" prefHeight="29.0" prefWidth="194.0">
+               <font>
+                  <Font name="Lato-Light" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="recdttf" editable="false" layoutX="207.0" layoutY="356.0" prefHeight="29.0" prefWidth="194.0" />
+            <Label layoutX="22.0" layoutY="40.0" text="PRODUCT CODE:">
+               <font>
+                  <Font name="Lato-Light" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="pctf" layoutX="207.0" layoutY="39.0" prefHeight="29.0" prefWidth="194.0">
+               <font>
+                  <Font name="Lato-Light" size="14.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="searchbtn" buttonType="RAISED" layoutX="446.0" layoutY="41.0" onAction="#SearchAction" prefHeight="23.0" prefWidth="67.0" styleClass="btn-style2" stylesheets="@../css/app.css" text="SEARCH" textFill="#f2ebeb">
+               <font>
+                  <Font name="Javanese Text" size="12.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="33.0" layoutY="103.0" prefHeight="4.0" prefWidth="460.0" />
+            <Label fx:id="warninglbl" layoutX="409.0" layoutY="176.0" prefHeight="99.0" prefWidth="107.0" textFill="#960202" wrapText="true">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

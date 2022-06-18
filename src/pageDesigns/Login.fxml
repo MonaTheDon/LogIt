@@ -3,7 +3,9 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -11,39 +13,52 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerClasses.LoginControl">
-   <children>
-      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <Pane layoutX="302.0" prefHeight="600.0" prefWidth="306.0" styleClass="back" stylesheets="@../css/app.css">
-               <children>
-                  <TextField fx:id="UserTF" layoutX="127.0" layoutY="157.0" promptText="Enter your username" />
-                  <Text layoutX="25.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="72.1461181640625">
+    <children>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" styleClass="anchor" stylesheets="@../css/app.css">
+            <children>
+                <Pane layoutX="284.0" layoutY="8.0" prefHeight="550.0" prefWidth="286.0" styleClass="grad2" stylesheets="@../css/app.css">
+                    <children>
+                        <TextField fx:id="UserTF" layoutX="115.0" layoutY="186.0" promptText="Enter your username" />
+                        <Text layoutX="23.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="91.0">
+                            <font>
+                                <Font name="Lato-Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <Text layoutX="23.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                            <font>
+                                <Font name="Lato-Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <JFXButton fx:id="LoginBTN" layoutX="98.0" layoutY="297.0" onAction="#LoginAction" prefHeight="25.0" prefWidth="91.0" styleClass="btn" stylesheets="@../css/app.css" text="Log me in" textFill="WHITE">
+                            <font>
+                                <Font name="Georgia" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <Label fx:id="Stat" layoutX="67.0" layoutY="323.0" prefHeight="40.0" prefWidth="171.0" wrapText="true">
                      <font>
-                        <Font name="Georgia" size="15.0" />
-                     </font>
-                  </Text>
-                  <Text layoutX="25.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                        <Font name="Javanese Text" size="14.0" />
+                     </font></Label>
+                        <PasswordField fx:id="PassTF" layoutX="115.0" layoutY="247.0" promptText="Enter your password" />
+                        <Text layoutX="53.0" layoutY="417.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Haven't LoggedIt Yet?" wrappingWidth="179.60003662109375">
+                            <font>
+                                <Font name="Lato-Light" size="18.0" />
+                            </font>
+                        </Text>
+                        <JFXButton fx:id="RegBTN" layoutX="87.0" layoutY="443.0" onAction="#RegisterAction" prefHeight="44.0" prefWidth="114.0" styleClass="btn" stylesheets="@../css/app.css" text="Register Here" textFill="WHITE">
                      <font>
-                        <Font name="Georgia" size="15.0" />
-                     </font>
-                  </Text>
-                  <JFXButton fx:id="LoginBTN" layoutX="152.0" layoutY="236.0" onAction="#LoginAction" prefHeight="25.0" prefWidth="72.0" styleClass="btn" stylesheets="@../css/app.css" text="Log me in" textFill="WHITE">
-                     <font>
-                        <Font name="Georgia" size="12.0" />
-                     </font>
-                  </JFXButton>
-                  <Label fx:id="Stat" layoutX="61.0" layoutY="309.0" prefHeight="17.0" prefWidth="105.0" />
-                  <PasswordField fx:id="PassTF" layoutX="127.0" layoutY="199.0" promptText="Enter your password" />
-                  <Text layoutX="25.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New User?">
-                     <font>
-                        <Font name="Times New Roman" size="15.0" />
-                     </font>
-                  </Text>
-                  <JFXButton fx:id="RegBTN" layoutX="101.0" layoutY="321.0" onAction="#RegisterAction" prefHeight="25.0" prefWidth="91.0" styleClass="btn" stylesheets="@../css/app.css" text="Register Here" textFill="WHITE" />
-               </children>
-            </Pane>
-            <ImageView fitHeight="150.0" fitWidth="222.0" layoutX="45.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </AnchorPane>
-   </children>
+                        <Font size="14.0" />
+                     </font></JFXButton>
+                  <ImageView fitHeight="125.0" fitWidth="134.0" layoutX="91.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/LogItLogoBg.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="53.0" layoutY="164.0" prefWidth="200.0" />
+                  <Separator layoutX="44.0" layoutY="375.0" prefWidth="200.0" />
+                    </children>
+                </Pane>
+                <ImageView fitHeight="150.0" fitWidth="222.0" layoutX="45.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>
