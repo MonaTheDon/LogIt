@@ -1,0 +1,99 @@
+package ControllerClasses;
+
+import com.jfoenix.controls.JFXButton;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class ViewStockControl {
+    public JFXButton viewstocksbtn;
+    public JFXButton incstocksbtn;
+    public JFXButton outgostocksbtn;
+    public JFXButton logoutbtn;
+    public TextField pntf;
+    public JFXButton swuserbtn;
+    public TextField qttf;
+    public TextField ptf;
+    public TextField recdttf;
+    public TextField pctf;
+    public JFXButton searchbtn;
+    public Label warninglbl;
+
+    @FXML
+    public void SearchAction (ActionEvent evt) throws IOException{
+        int pc =Integer.parseInt(pctf.getText());
+        String pname,rcdate;
+        int pric, qt;
+
+        try {
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/logit", "root", "tanisha0714");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("select * from stocks where Prodcode="+pc);
+            while (rs.next()){
+                pname= rs.getString("Prodname");
+                rcdate=rs.getString("recdate");
+                pric=rs.getInt("price");
+                qt=rs.getInt("qty");
+                pntf.setText(pname);
+                recdttf.setText(rcdate);
+                ptf.setText(""+pric);
+                qttf.setText(""+qt);
+                if (qt<=3){
+                    warninglbl.setText("Time to Order More Stocks!");
+                }
+
+
+            }
+        }
+
+        catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
+    @FXML
+    public void IncomingOpen(ActionEvent evt) throws IOException {
+        Parent AdminBoard = FXMLLoader.load((getClass().getResource("/pageDesigns/Incoming.fxml")));
+        Scene AdminBoardScene = new Scene(AdminBoard);
+        Stage userStage = (Stage) ((Node) evt.getSource()).getScene().getWindow();
+        userStage.setScene(AdminBoardScene);
+        userStage.setTitle("Welcome to LoggIt");
+        userStage.show();
+    }
+
+    @FXML
+    public void OutgoingOpen(ActionEvent evt) throws IOException {
+        Parent AdminBoard = FXMLLoader.load((getClass().getResource("/pageDesigns/Outgoing.fxml")));
+        Scene AdminBoardScene = new Scene(AdminBoard);
+        Stage userStage = (Stage) ((Node) evt.getSource()).getScene().getWindow();
+        userStage.setScene(AdminBoardScene);
+        userStage.setTitle("Outgoing Stock");
+        userStage.show();
+    }
+
+    @FXML
+    public void LogOut(ActionEvent evt) throws IOException {
+        Parent AdminBoard = FXMLLoader.load((getClass().getResource("/pageDesigns/Login.fxml")));
+        Scene AdminBoardScene = new Scene(AdminBoard);
+        Stage userStage = (Stage) ((Node) evt.getSource()).getScene().getWindow();
+        userStage.setScene(AdminBoardScene);
+        userStage.setTitle("Log In");
+        userStage.show();
+    }
+
+}
+
