@@ -8,13 +8,13 @@ import javafx.stage.Stage;
 
 //import java.util.Objects;
 
-public class LoginMain extends Application {
+public class UpdateMain extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load((getClass().getResource("/pageDesigns/Login.fxml")));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 600, 558.4));
+        Parent root = FXMLLoader.load((getClass().getResource("/pageDesigns/Update.fxml")));
+        primaryStage.setTitle("Incoming Stock");
+        primaryStage.setScene(new Scene(root, 900, 600));
         primaryStage.show();
     }
 

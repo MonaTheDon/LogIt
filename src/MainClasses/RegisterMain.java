@@ -17,7 +17,7 @@ public class RegisterMain extends Application {
         primaryStage.setTitle("LogIt Registration Page");
         primaryStage.setScene(new Scene(root, 754.0, 565.0));
         primaryStage.show();
-}
+    }
 
     public static void main(String[] args) {launch(args);
     }
